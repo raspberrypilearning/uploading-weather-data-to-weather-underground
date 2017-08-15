@@ -1,4 +1,3 @@
-Example:
 title: Uploading weather data to Weather Underground
 hero_image: images/banner.png
 description: Upload your own climate measuremets to Weather Underground
@@ -9,8 +8,9 @@ listed: false
 ingredient: false
 copyedit: false
 interests: "weather"
-technology: "web"
-curriculum: creator, design-0, programming-1, phys-comp-0, manufacture-0, community-1
+technologies: "web"
+curriculum: creator
+site_areas:
 steps:
   - title: "Introduction"
   - title: "What you will need"
