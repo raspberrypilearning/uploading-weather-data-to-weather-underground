@@ -1,0 +1,22 @@
+Example:
+title: Uploading weather data to Weather Underground
+hero_image: images/banner.png
+description: Upload your own climate measuremets to Weather Underground
+original_url:
+theme: orange
+duration: 2
+listed: false
+ingredient: false
+copyedit: false
+interests: "weather"
+technology: "web"
+curriculum: creator, design-0, programming-1, phys-comp-0, manufacture-0, community-1
+steps:
+  - title: "Introduction"
+  - title: "What you will need"
+  - title: "Registering with Weather Underground"
+  - title: "The Weather Underground upload protocol"
+  - title: "Using Python to convert your data"
+  - title: "Uploading"
+  - title: "Testing"
+  - title: "What next?
