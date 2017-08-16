@@ -12,9 +12,10 @@
 | wind_speed |
 | wind_gust |
 | rainfall |
+||
 
 
-One easy way is to simply look at the last actual values recorded by your weather station and use those.
+- One easy way is to simply look at the last actual values recorded by your weather station and use those.
 
 You can find an example of a Python test script [here](WU_test_upload.py).
 
@@ -27,7 +28,7 @@ You can find an example of a Python test script [here](WU_test_upload.py).
 
 --- hints ---
 --- hint ---
-If you get stuck, here is a basic example of a [modified log_all_sensors.py](log_all_sensorsWU.py) script.
+If you get stuck, here is a basic example of a [modified log_all_sensors.py](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/master/en/resources/WU_test_upload.py) script.
 
 --- /hint ---
 --- /hints ---

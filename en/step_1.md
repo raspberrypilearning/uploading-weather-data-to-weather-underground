@@ -14,6 +14,10 @@ The steps in this guide assume that you will be regularly uploading data to Weat
 
 ### What you will make
 
-You'll use the Python requests library to upload data from your weather sensors to Weather Underground where you can monitor and analyse your measurements. You can then use the Weather Underground widgets to display a weather summary on your own website.
+You'll use the Python requests library to upload data from your weather sensors to Weather Underground where you can monitor and analyse your measurements.
 
 (<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
+
+You can then use the Weather Underground widgets to display a weather summary on your own website.
+
+![](images/image3.png)
