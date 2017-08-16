@@ -20,9 +20,35 @@ One of the great things about Python is the huge number of libraries that have b
 - Now you need to add in each one of your weather readings. If the values are not stored as strings then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read if you need to do any debugging. It is also good practice to only present data that appears to be more precise than it really is.
 
 [[[rounding-numbers-with-python]]]
- 
-- Now, for each of the raw values from the Weather Station, this code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.
 
+- Now, for each of the raw values from the Weather Station, write the code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.
+
+- To get you started, write the code to take an atmospheric pressure reading `pressure` which is a **float**, convert it from Pascals to Inches of Mercury, and then convert it to a string `pressure_in` rounded to 2 decimal places.
+
+--- hints ---
+--- hint ---
+First of all, you can use the function you wrote earlier to perform the units conversion.
+
+    ```python
+    def pa_to_inches(pressure_in_pa):
+        pressure_in_inches_of_m = pressure_in_pa * 0.02953
+        return pressure_in_inches_of_m
+    pressure_in = pa_to_inches(pressure)
+    ```
+--- /hint ---
+--- hint ---
+Now use `.format` to create the rounded string:
+
+    ```python
+    pressure_in = float("{0:.2f}".format(pa_to_inches(pressure)))
+    ```
+---/hint---
+---/hints---
+
+- You can then use the same process for all of the other weather readings that you have. If you have a schools' Weather Station Kit, that will produce ambient & ground temperature, humidity, wind speed, direction & gusts and  rainfall values. Some of these will need converting into the appropriate units, others just need to be rounded.
+
+--- hints ---
+--- hint ---
     ```python
     ambient_temp_f = float("{0:.2f}".format(degc_to_degf(ambient_temp)))
     ground_temp_f = float("{0:.2f}".format(degc_to_degf(ground_temp)))
@@ -31,11 +57,11 @@ One of the great things about Python is the huge number of libraries that have b
     wind_speed_mph = float("{0:.2f}".format(khm_to_mph(wind_speed)))
     wind_gust_mph = float("{0:.2f}".format(khm_to_mph(wind_gust)))
     wind_average = float("{0:.2f}".format(wind_average))
-    air_quality = float("{0:.2f}".format(air_quality))
-    light = float("{0:.2f}".format(get_light()))
     rainfall_in = float("{0:.2f}".format(mm_to_inches(rainfall)))
 
     ```
+---/hint---
+---/hints---
 
  - Then you can create a set of variables for each of the various parameters we need to include in the URL.
 
