@@ -47,7 +47,7 @@ One of the great things about Python is the huge number of libraries that have b
 
 --- hints ---
 --- hint ---
-- You code should look like this:
+- Your code should look like this:
     ```python
     ambient_temp_f = float("{0:.2f}".format(degc_to_degf(ambient_temp)))
     ground_temp_f = float("{0:.2f}".format(degc_to_degf(ground_temp)))
@@ -62,7 +62,6 @@ One of the great things about Python is the huge number of libraries that have b
 ---/hints---
 
  - Then you can create a set of variables for each of the various parameters we need to include in the URL.
-
     ```python
     f_date = "&dateutc=now"
     f_humid = "&humidity=" + str(humidity)
@@ -74,7 +73,6 @@ One of the great things about Python is the huge number of libraries that have b
     f_groundtemp = "&soiltempf=" + str(ground_temp_f)   # degrees F
     f_winddir = "&winddir=" + str(wind_average)
     f_action = "&action=updateraw"
-
     ```
 - Note that you don't need to create a string for the date/timestamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your http request. If you were storing weather readings and uploading them in bulk later, you would need to format a date/timestamp for each record before sending it.
 
