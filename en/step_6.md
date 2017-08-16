@@ -4,7 +4,7 @@ One of the great things about Python is the huge number of libraries that have b
 
 [[[generic-python-requests]]]
 
-1. Now you can make http requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all,  create a few variables to hold important text strings.
+- Now you can make http requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all,  create a few variables to hold important text strings.
 
     ```python
     # create a string to hold the first part of the URL
@@ -17,7 +17,11 @@ One of the great things about Python is the huge number of libraries that have b
 
     If you can't remember your PWS credentials you can always find them [here](https://www.wunderground.com/personal-weather-station/mypws).
 
-1. Now, for each of the raw values from the Weather Station, this code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.
+- Now you need to add in each one of your weather readings. If the values are not stored as strings then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read if you need to do any debugging. It is also good practice to only present data that appears to be more precise than it really is.
+
+[[[rounding-numbers-with-python]]]
+ 
+- Now, for each of the raw values from the Weather Station, this code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.
 
     ```python
     ambient_temp_f = float("{0:.2f}".format(degc_to_degf(ambient_temp)))
@@ -33,7 +37,7 @@ One of the great things about Python is the huge number of libraries that have b
 
     ```
 
- 1. Then you can create a set of variables for each of the various parameters we need to include in the URL.
+ - Then you can create a set of variables for each of the various parameters we need to include in the URL.
 
     ```python
     f_date = "&dateutc=now"
@@ -48,9 +52,9 @@ One of the great things about Python is the huge number of libraries that have b
     f_action = "&action=updateraw"
 
     ```
-1. Note that you don't need to create a string for the date/timestamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your http request. If you were storing weather readings and uploading them in bulk later, you would need to format a date/timestamp for each record before sending it.
+- Note that you don't need to create a string for the date/timestamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your http request. If you were storing weather readings and uploading them in bulk later, you would need to format a date/timestamp for each record before sending it.
 
-1. Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the *WUurl*  variable earlier.
+- Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the *WUurl*  variable earlier.
 
     ```python
     r= requests.get(
