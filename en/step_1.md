@@ -1,8 +1,19 @@
 ## Introduction
 
-This guide assumes that you have already built and installed your Weather Station kit. If you have not done that yet, follow these instructions and then come back here when you've finished.
+There are loads of ways to collect weather data with a raspberry Pi: you can collect humidity, temperature and pressure data with a SenseHat, connect a UV light sensor to your GPIO pins or even build en entire Weather Station like the kits we recently sent to lucky schools around the world.
+
+Once you're collecting data, it's great to plot graphs and look at how your local climate is changing over time. You can also contribute your data to an online community like Weather Underground.
 
 Weather Underground has a global community of people supplying data from weather stations and air quality monitors to provide hyperlocal data and forecasting. Many types of popular consumer weather stations can be used with Weather Underground and the code for the Oracle Raspberry Pi school kit can also be modified to stream data in the same way.
 
+The instructions in this  project are based around our Weather Station kit but you should be able to adapt the process to upload whatever data you are collecting.
+
+*If you are using one of our Weather Station kits or have built your own, this guide assumes that you have already built and installed your Weather Station kit. If you have not done that yet, follow these instructions and then come back here when you've finished!*
+
+The steps in this guide assume that you will be regularly uploading data to Weather Underground. If you have limited bandwidth or poor connectivity between your station and the Internet then you might want to consider data a configuration that sends data every 15 minutes. The Weather Underground website will not display any data older than 20 minutes so batch uploads of data are only really useful for historical storage. If you have one of out school Weather Station kits and frequent uploads cause problems then you should probably use the Oracle database as described in the standard software build guide.
+
 ### What you will make
-The steps in this guide assume that you will be regularly uploading data to Weather Underground. If you have limited bandwidth or poor connectivity between your station and the Internet then you might want to consider data a configuration that sends data every 15 minutes. The Weather Underground website will not display any data older than 20 minutes so batch uploads of data are only really useful for historical storage. If frequent uploads cause problems then you should probably use the Oracle database as described in the standard software build guide.
+
+You'll use the Python requests library to upload data from your weather sensors to Weather Underground where you can monitor and analyse your measurements.
+
+![WU widget](http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wxstnsticker_metric&weatherstationcount=IESHER4" height="160" width="160" border="0" alt="Weather Underground PWS IESHER4)
