@@ -27,8 +27,7 @@ One of the great things about Python is the huge number of libraries that have b
 
 --- hints ---
 --- hint ---
-First of all, you can use the function you wrote earlier to perform the units conversion.
-
+- First of all, you can use the function you wrote earlier to perform the units conversion.
     ```python
     def pa_to_inches(pressure_in_pa):
         pressure_in_inches_of_m = pressure_in_pa * 0.02953
@@ -37,8 +36,7 @@ First of all, you can use the function you wrote earlier to perform the units co
     ```
 --- /hint ---
 --- hint ---
-Now use `.format` to create the rounded string:
-
+- Now use `.format` to create the rounded string:
     ```python
     pressure_in = float("{0:.2f}".format(pa_to_inches(pressure)))
     ```
@@ -49,6 +47,7 @@ Now use `.format` to create the rounded string:
 
 --- hints ---
 --- hint ---
+- You code should look like this:
     ```python
     ambient_temp_f = float("{0:.2f}".format(degc_to_degf(ambient_temp)))
     ground_temp_f = float("{0:.2f}".format(degc_to_degf(ground_temp)))
@@ -58,7 +57,6 @@ Now use `.format` to create the rounded string:
     wind_gust_mph = float("{0:.2f}".format(khm_to_mph(wind_gust)))
     wind_average = float("{0:.2f}".format(wind_average))
     rainfall_in = float("{0:.2f}".format(mm_to_inches(rainfall)))
-
     ```
 ---/hint---
 ---/hints---
