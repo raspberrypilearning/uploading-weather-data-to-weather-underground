@@ -10,6 +10,7 @@ You can see from the Weather Underground protocol that it requires some measurem
         return pressure_in_inches_of_m
 
     ```
+
 --- challenge ---
 Another unit involving inches is the amount of rainfall measurement. Write a function in Python to convert a rainfall value from mm to inches.
 --- /challenge ---
@@ -31,7 +32,7 @@ Given that conversion factor, you will need to multiply your rainfall value in m
 --- /hint ---
 --- /hints ---
 
-1. The final conversion that you need to make is for the wind speeds. The [code used to process anemometer readings](https://github.com/raspberrypilearning/sensing-the-weather/blob/master/lesson-2/worksheet.md) provides values in km/h whereas Weather Underground is expecting mph. The conversion is straightforward:
+1. The final conversion that you need to make is for the wind speeds. The [code used to process Weather Station kit anemometer readings](https://github.com/raspberrypilearning/sensing-the-weather/blob/master/lesson-2/worksheet.md) provides values in km/h whereas Weather Underground is expecting mph. The conversion is straightforward:
 
     ```Python
     def khm_to_mph(speed_in_kmh):

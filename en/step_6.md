@@ -14,6 +14,7 @@ One of the great things about Python is the huge number of libraries that have b
     WUcreds = "ID=" + WUid + "&PASSWORD="+ WUpwd
 
     ```
+
     If you can't remember your PWS credentials you can always find them [here](https://www.wunderground.com/personal-weather-station/mypws).
 
 1. Now, for each of the raw values from the Weather Station, this code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.

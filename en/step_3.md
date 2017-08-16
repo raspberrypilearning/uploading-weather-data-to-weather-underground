@@ -1,9 +1,6 @@
 ## Registering with Weather Underground
 
-1. The first task is to [register with Weather Underground](https://www.wunderground.com/signup).
-You'll need check the box to confirm that you agree to the Terms of Service and
-provide an email address. A  message
-will be sent to that account and you'll need to click on the 'Validate your email'
+1. The first task is to [register with Weather Underground](https://www.wunderground.com/signup). You'll need check the box to confirm that you agree to the Terms of Service and provide an email address. A  message will be sent to that account and you'll need to click on the 'Validate your email'
 button that it contains.
 ![](images/image1.png)
 

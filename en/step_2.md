@@ -4,7 +4,7 @@
 
 A Raspberry Pi with some external sensors or HAT (e.g. a SenseHat, [Pimoroni Enviro Phat](https://shop.pimoroni.com/products/enviro-phat)).
 
-### software
+### Software
 
 The latest version of Raspbian.
 
