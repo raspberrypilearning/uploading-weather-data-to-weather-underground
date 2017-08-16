@@ -4,12 +4,12 @@ The method for uploading data to Weather Underground uses the standard http prot
 
 Take a look at this example:
 
-https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw
+(https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw)
 
 If you clink on this link or copy and paste it into your browser, you should just see a line of unformatted text complaining that the password and key were incorrect. Let's break down the fields in the URL.
 
 | Field | Analysis |
-|-------|----------|
+|:-------:|:----------:|
 | https:// | Protocol |
 | weatherstation.wunderground.com | webserver DNS name |
 | /weatherstation/ | website directory path |
@@ -34,7 +34,7 @@ Obviously you have to know what the name of the parameter will be: in our exampl
 In fact some of the other parameters use different units too:
 
 |Name|Units|Sensor|
-|-----|----|------|
+|:-----:|:----:|:------:|
 |winddir| degrees| wind direction|
 |windspeed|*mph*| wind speed|
 |windgust|*mph*| Wind gust speed|
