@@ -8,7 +8,7 @@ Weather Underground has a global community of people supplying data from weather
 
 The instructions in this  project are based around our Weather Station kit but you should be able to adapt the process to upload whatever data you are collecting.
 
-*If you are using one of our Weather Station kits or have built your own, this guide assumes that you have already built and installed your Weather Station kit. If you have not done that yet, follow these instructions and then come back here when you've finished!*
+*If you are using one of our Weather Station kits or have designed your own version, this guide assumes that you have already built and installed your it. If you have not done that yet, follow [these instructions](https://www.raspberrypi.org/learning/weather-station-guide/) and then come back here when you've finished!*
 
 The steps in this guide assume that you will be regularly uploading data to Weather Underground. If you have limited bandwidth or poor connectivity between your station and the Internet then you might want to consider data a configuration that sends data every 15 minutes. The Weather Underground website will not display any data older than 20 minutes so batch uploads of data are only really useful for historical storage. If you have one of out school Weather Station kits and frequent uploads cause problems then you should probably use the Oracle database as described in the standard software build guide.
 
@@ -16,8 +16,8 @@ The steps in this guide assume that you will be regularly uploading data to Weat
 
 You'll use the Python requests library to upload data from your weather sensors to Weather Underground where you can monitor and analyse your measurements.
 
-(<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
+![](images/image4.png)
 
 You can then use the Weather Underground widgets to display a weather summary on your own website.
 
-![](images/image3.png)
+(<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
