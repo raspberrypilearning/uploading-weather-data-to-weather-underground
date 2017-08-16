@@ -24,4 +24,4 @@ You can then use the Weather Underground widgets to display a weather summary on
 
 Or:
 
-()<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>)
+(<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>)
