@@ -1,6 +1,6 @@
 ## Introduction
 
-There are loads of ways to collect weather data with a raspberry Pi: you can collect humidity, temperature and pressure data with a SenseHat, connect a UV light sensor to your GPIO pins or even build en entire Weather Station like the kits we recently sent to lucky schools around the world.
+There are loads of ways to collect weather data with a raspberry Pi: you can collect humidity, temperature and pressure data with a SenseHat, connect a UV light sensor to your GPIO pins or even build a complete [Weather Station](https://www.raspberrypi.org/education/weather-station/) like the kits we recently sent to lucky schools around the world.
 
 Once you're collecting data, it's great to plot graphs and look at how your local climate is changing over time. You can also contribute your data to an online community like Weather Underground.
 
@@ -21,3 +21,7 @@ You'll use the Python requests library to upload data from your weather sensors 
 You can then use the Weather Underground widgets to display a weather summary on your own website.
 
 (<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
+
+Or:
+
+()<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=IESHER4&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>)
