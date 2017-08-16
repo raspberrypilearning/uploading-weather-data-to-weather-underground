@@ -50,7 +50,7 @@ One of the great things about Python is the huge number of libraries that have b
     ```
 1. Note that you don't need to create a string for the date/timestamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your http request. If you were storing weather readings and uploading them in bulk later, you would need to format a date/timestamp for each record before sending it.
 
-1. Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the *WUurl* variable earlier.
+1. Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the *WUurl*  variable earlier.
 
     ```python
     r= requests.get(
