@@ -9,9 +9,9 @@ Take a look at this example:
 If you clink on this link or copy and paste it into your browser, you should just see a line of unformatted text complaining that the password and key were incorrect. Let's break down the fields in the URL.
 
 | Field | Analysis |
-|-------|:----------:|
+|-------|----------|
 | https:// | Protocol |
-| weatherstation.wunderground.com | webserver DNS name |
+| weatherstation.wunderground.com  | webserver DNS name |
 | /weatherstation/ | website directory path |
 | updateweatherstation.php? | PHP command |
 | ID=XXXXX| 1st parameter |
@@ -36,11 +36,11 @@ In fact some of the other parameters use different units too:
 
 | Name | Units | Sensor |
 |-----|:----:|------|
-| winddir| degrees| wind direction|
-|windspeed|*mph*| wind speed|
-|windgust|*mph*| Wind gust speed|
-|rainin| *inches*| Rainfall|
-|baromin| *inches*| Pressure|
+| winddir| degrees | wind direction|
+|windspeed| *mph* | wind speed|
+|windgust| *mph* | Wind gust speed|
+|rainin| *inches* | Rainfall|
+|baromin| *inches* | Pressure|
 |||
 
 Make a list of the data collected by your sensors and use the protocol specifications to see if you need to perform any conversions before uploading your data.
