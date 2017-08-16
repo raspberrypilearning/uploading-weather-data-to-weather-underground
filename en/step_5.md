@@ -23,11 +23,14 @@ You need to find out what conversion factor is required to mathematically conver
 Given that conversion factor, you will need to multiply your rainfall value in millimeters by 0.0393701.
 --- /hint ---
 --- hint ---
+Write this as a Python function:
+
     ```Python
     def mm_to_inches(rainfall_in_mm):
         rainfall_in_inches = rainfall_in_mm * 0.0393701
         return rainfall_in_inches
-        ```
+
+    ```
 --- /hint ---
 --- /hints ---
 
@@ -41,10 +44,13 @@ You need to find out what conversion factor is required to mathematically conver
 Given that conversion factor, you will need to multiply your wind speed value in khm by 0.0393701.
 --- /hint ---
 --- hint ---
+Write this as a Python function:
+
     ```Python
     def khm_to_mph(speed_in_kmh):
         speed_in_mph = speed_in_kmh * 0.621371
         return speed_in_mph
-        ```
+        
+    ```
 --- /hint ---
 --- /hints ---
