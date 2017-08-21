@@ -2,11 +2,6 @@
 
 There are lots of ways to collect weather data with a raspberry Pi: you can collect humidity, temperature and pressure data with a SenseHat, connect a UV light sensor to your GPIO pins or even build a complete [Weather Station](https://www.raspberrypi.org/education/weather-station/) like the kits we recently sent to lucky schools around the world.
 
-[[[rpi-sensehat-temperature]]]
-
-[[[rpi-sensehat-pressure]]]
-
-[[[rpi-sensehat-humidity]]]
 
 Once you're collecting data, it's great to plot graphs and look at how your local climate is changing over time. You can also contribute your data to an online community like Weather Underground.
 
