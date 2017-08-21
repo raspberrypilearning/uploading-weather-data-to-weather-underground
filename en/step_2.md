@@ -2,12 +2,16 @@
 
 ### Hardware
 
-+ List hardware here, or delete section.
+A Raspberry Pi with some external sensors or HAT (e.g. a SenseHat, [Pimoroni Enviro Phat](https://shop.pimoroni.com/products/enviro-phat)).
 
 ### Software
 
-+ List software here, or delete section.
+The latest version of Raspbian.
 
-### Additional Resources
+Any libraries need to access data from your sensors (e.g. [Python sense-hat](https://pythonhosted.org/sense-hat/))
 
-+ List additional resources, or delete section.
+The Python `requests` library. This can be installed by typing:
+
+```bash
+sudo pip3 install requests
+```
