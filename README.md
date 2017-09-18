@@ -1,6 +1,5 @@
 # uploading-weather-data-to-weather-underground-v2
 
-
 [](<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
 
 In this resource you will learn how to register your Raspberry Pi Weather Station as a Weather Underground Personal Weather Station (PWS) and automatically upload your data.
