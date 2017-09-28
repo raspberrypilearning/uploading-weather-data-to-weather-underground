@@ -7,9 +7,7 @@ Now log in to your new Weather Underground account and follow the steps below to
 - Select that option from the **More** drop-down menu at the top of the page.
 - Then use the map to set the location of your weather station.
 - Zoom in on the map and try to place the marker as accurately as possible. You can also set your height above sea level, which you can find using one of a number of [online tools](https://www.freemaptools.com/elevation-finder.htm){:target="_blank"}.
-
-Click on the "Verify Location" button to move on to the next page.
-
+- Click on the "Verify Location" button to move on to the next page.
 - Provide a general description of your location in the "Neighbourhood" box. This will appear with your station details on the website, so choose something useful.
 - Select what kind of Hardware you have: make sure you select the option 'Raspberry Pi".
 - All other parameters are option but you can complete them if you wish.
