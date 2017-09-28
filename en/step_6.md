@@ -1,6 +1,6 @@
-## Using Python to upload our data
+## Using Python to upload your data
 
-One of the great things about Python is the huge number of libraries that people have written and made available for free. Here you're going to use the `requests` module, so make sure you've [installed](step_2.md) it.
+One of the great things about Python is the huge number of libraries that people have written and made available for free. Here you're going to use the `requests` module, so make sure you've installed it.
 
 [[[generic-python-requests]]]
 
@@ -9,13 +9,13 @@ One of the great things about Python is the huge number of libraries that people
     ```python
     # create a string to hold the first part of the URL
     WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
-    WUid = "XXXXX" # Modify this variable so that in contains your PWS Id
-    WUpwd = "YYYYYYY" # Modify this variable so that in contains your Password
+    WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
+    WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
     WUcreds = "ID=" + WUid + "&PASSWORD="+ WUpwd
 
     ```
 
-    If you can't find where you noted down the  Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
+    If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
 
 Now you need to add each one of your weather readings. If the values are not stored as strings, then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to only present data that you know is reliable.
 
