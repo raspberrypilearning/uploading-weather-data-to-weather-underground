@@ -4,7 +4,15 @@ One of the great things about Python is the huge number of libraries that people
 
 [[[generic-python-requests]]]
 
-- Now that you can make HTTP requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all, create a few variables to hold important text strings.
+
+
+- Now that you can make HTTP requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all, import the Requests library. Add this line to the top of WU-upload.py.
+
+    ```python
+    import requests
+    ```
+
+- Then add some variables to hold important text strings to 
 
     ```python
     # create a string to hold the first part of the URL
@@ -15,9 +23,9 @@ One of the great things about Python is the huge number of libraries that people
 
     ```
 
-    If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
+- If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
 
-Now you need to add each one of your weather readings. If the values are not stored as strings, then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to only present data that you know is reliable.
+- Now you need to add each one of your weather readings. If the values are not stored as strings, then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to only present data that does not claim to be more accurate than it really is.
 
 [[[rounding-numbers-with-python]]]
 
