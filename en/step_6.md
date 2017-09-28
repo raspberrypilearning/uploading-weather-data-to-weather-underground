@@ -12,16 +12,16 @@ One of the great things about Python is the huge number of libraries that people
     import requests
     ```
 
-- Then add some variables to hold important text strings to 
+- Then add some variables to hold important text strings to
 
-    ```python
-    # create a string to hold the first part of the URL
-    WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
-    WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
-    WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
-    WUcreds = "ID=" + WUid + "&PASSWORD="+ WUpwd
+	```python
+	# create a string to hold the first part of the URL
+	WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
+	WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
+	WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
+	WUcreds = "ID=" + WUid + "&PASSWORD="+ WUpwd
 
-    ```
+	```
 
 - If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
 
