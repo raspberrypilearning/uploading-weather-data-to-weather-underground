@@ -1,6 +1,6 @@
 title: Uploading weather data to Weather Underground
 hero_image: images/banner.png
-description: Upload your own climate measuremets to Weather Underground
+description: Upload your climate measurements to Weather Underground
 original_url:
 theme: orange
 duration: 2
@@ -12,11 +12,11 @@ technologies: "web"
 curriculum: creator
 site_areas:
 steps:
-  - title: "Introduction"
-  - title: "What you will need"
-  - title: "Registering with Weather Underground"
-  - title: "The Weather Underground upload protocol"
-  - title: "Using Python to convert your data"
-  - title: "Using Python to upload your data"
-  - title: "Testing"
-  - title: "What next?"
+  - title: Introduction
+  - title: What you will need
+  - title: Registering with Weather Underground
+  - title: The Weather Underground upload protocol
+  - title: Using Python to convert your data
+  - title: Using Python to upload your data
+  - title: Testing
+  - title: What next?

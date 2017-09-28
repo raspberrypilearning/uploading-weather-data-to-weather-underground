@@ -1,6 +1,6 @@
 ## Testing
 
-- Before you modify your Weather Station code to include a Weather Underground upload, it is a good idea to test it first. Assemble all the various code elements above into a single file and then make up some test data for the normal Weather Station measurement variables:
+- Before you modify your weather station code to include a Weather Underground upload, it is a good idea to test your new section of code. Assemble all the various code elements above into a single file and then make up some test data for the normal Weather Station measurement variables:
 
 | Measurement variable |
 |--------------------|
@@ -15,16 +15,16 @@
 ||
 
 
-- One easy way is to simply look at the last actual values recorded by your weather station and use those.
+- One easy way is to use last actual values recorded by your weather station.
 
 You can find an example of a Python test script [here](WU_test_upload.py).
 
-- Run your code and check that your return code (r.status.code) is 200 and that you receive a *success* response (r.text). If your response is something else, check your code and make sure that your have included the correct PWS Id and password in your request.
+- Run your code and check that your return code (r.status.code) is `200`, and that you receive a `success` response (r.text). If your response is something else, check your code and make sure that your have included the correct PWS ID and password in your request.
 
 - If your code produces the correct responses, visit your PWS page on the Weather Underground website and verify that your data has been uploaded. Check that the values make sense for the relevant units.
 ![](images/image3.png)
 
-- Once you're happy with your tests, integrate this code with the scripts running on your Weather station. A simple way to do this is to modify the [log_all_sensors.py](https://github.com/raspberrypi/weather-station/blob/master/log_all_sensors.py) file which, if you've followed the [standard installation instructions](https://www.raspberrypi.org/learning/weather-station-guide/), should be run every 5 minutes via crontab. This is a sensible frequency for uploading to a site like Weather Underground.
+- Once you're happy with your tests, integrate this code with the scripts running on your weather station. If you're using a Raspberry Pi Weather Station, a simple way to do this is to modify the [log_all_sensors.py](https://github.com/raspberrypi/weather-station/blob/master/log_all_sensors.py) code. If you've followed the [standard installation instructions](https://www.raspberrypi.org/learning/weather-station-guide/), this script should be run every five minutes via Cron, which is a sensible frequency for uploading to a site like Weather Underground.
 
 --- hints ---
 --- hint ---

@@ -1,10 +1,10 @@
 ## Using Python to upload our data
 
-One of the great things about Python is the huge number of libraries that have been written. In this case you're going to use the *requests* module so make sure you've [installed](step_2.md) it.
+One of the great things about Python is the huge number of libraries that people have written and made available for free. Here you're going to use the `requests` module, so make sure you've [installed](step_2.md) it.
 
 [[[generic-python-requests]]]
 
-- Now you can make http requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all,  create a few variables to hold important text strings.
+- Now that you can make HTTP requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all, create a few variables to hold important text strings.
 
     ```python
     # create a string to hold the first part of the URL
@@ -15,19 +15,19 @@ One of the great things about Python is the huge number of libraries that have b
 
     ```
 
-    If you can't remember your PWS credentials you can always find them [here](https://www.wunderground.com/personal-weather-station/mypws).
+    If you can't find where you noted down the  Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws).
 
-- Now you need to add in each one of your weather readings. If the values are not stored as strings then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read if you need to do any debugging. It is also good practice to only present data that appears to be more precise than it really is.
+Now you need to add each one of your weather readings. If the values are not stored as strings, then you'll need to convert them before you can add them to `WUurl`. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to only present data that you know is reliable.
 
 [[[rounding-numbers-with-python]]]
 
-- Now, for each of the raw values from the Weather Station, write the code performs any required conversion and then neatly formats the numerical vale to 2 decimal places.
+- For each of the raw values from the Weather Station, write the code to perform any required conversion and to then neatly format the value to two decimal places.
 
-- To get you started, write the code to take an atmospheric pressure reading `pressure` which is a **float**, convert it from Pascals to Inches of Mercury, and then convert it to a string `pressure_in` rounded to 2 decimal places.
+- To get started, write the code to take an atmospheric pressure reading called `pressure`, which is a floating-point number. Convert it from pascals to inches of mercury, and then turn it into a string called `pressure_in` rounded to two decimal places.
 
 --- hints ---
 --- hint ---
-- First of all, you can use the function you wrote earlier to perform the units conversion.
+- You can use the function you wrote earlier to perform the unit conversion.
     ```python
     def pa_to_inches(pressure_in_pa):
         pressure_in_inches_of_m = pressure_in_pa * 0.02953
@@ -43,7 +43,7 @@ One of the great things about Python is the huge number of libraries that have b
 ---/hint---
 ---/hints---
 
-- You can then use the same process for all of the other weather readings that you have. If you have a schools' Weather Station Kit, that will produce ambient & ground temperature, humidity, wind speed, direction & gusts and  rainfall values. Some of these will need converting into the appropriate units, others just need to be rounded.
+- You can then use the same process for all of your other weather readings. If you have a schools' Weather Station kit, that will produce measurements for ambient as well as ground temperature, humidity, wind speed, wind direction and gusts, and rainfall. Some of these values will need to be converted into the appropriate units, others just need to be rounded.
 
 --- hints ---
 --- hint ---
@@ -74,9 +74,9 @@ One of the great things about Python is the huge number of libraries that have b
     f_winddir = "&winddir=" + str(wind_average)
     f_action = "&action=updateraw"
     ```
-- Note that you don't need to create a string for the date/timestamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your http request. If you were storing weather readings and uploading them in bulk later, you would need to format a date/timestamp for each record before sending it.
+- Note that you don't need to create a string for the time stamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
 
-- Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the *WUurl*  variable earlier.
+- Finally you can create the segment of the URL containing the measurement parameters and concatenate it with the domain name and directory part of the URL which you stored in the `WUurl` variable.
 
     ```python
     r= requests.get(
