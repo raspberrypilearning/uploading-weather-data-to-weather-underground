@@ -8,7 +8,13 @@ Weather Underground registration is only open to people 13 years and older. If y
 - A Raspberry Pi Oracle Weather Station kit
 _OR_
 - An equivalent set of sub-set of sensors. For example you could use
- a Sense HAT, or a [Pimoroni Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat){:target="_blank"}) which you can connect to the Pi
+ a Sense HAT, or a [Pimoroni Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat){:target="_blank" which you can connect to the Pi
+
+[[[rpi-sensehat-temperature]]]
+
+[[[rpi-sensehat-pressure]]]
+
+[[[rpi-sensehat-humidity]]]
 
 ### Software
 
@@ -17,8 +23,8 @@ _OR_
 
     ```bash
     sudo pip3 install requests
-    ```
-
+    ``
+    
 
 - The [Oracle Weather Station software](https://www.raspberrypi.org/learning/weather-station-guide/software.md){:target="_blank"}.
 _OR_
