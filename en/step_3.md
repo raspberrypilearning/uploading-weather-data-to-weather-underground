@@ -1,6 +1,7 @@
 ## Registering with Weather Underground
 
-- First, [register with Weather Underground](https://www.wunderground.com/signup){:target="_blank"}. You'll need to check the box to confirm that you agree with their terms of service, and provide an email address. If you're under 13 years old, you'll need to have an adult register on your behalf.  A  message will be sent to the email address that you provide, and you'll need to click on the **Validate your email** button that it contains.
+- First, [register with Weather Underground](https://www.wunderground.com/signup){:target="_blank"}. You'll need to check the box to confirm that you agree with their terms of service, and provide an email address. If you're under 13 years old, you'll need to have an adult register on your behalf.  A  message will be sent to the email address that you provide, and you'll need to click on the **Validate your email** button that it contains. If you don't receive a validation email, check your Spam folder. If you still can't find it, you can request it using the "Send Validation Email" button on the Add Weather Station page.
+
 ![](images/image1.png)
 
 Now log in to your new Weather Underground account and follow the steps below to add your weather station

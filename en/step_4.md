@@ -6,11 +6,11 @@ The method for uploading data to Weather Underground uses the standard HTTP prot
 
 https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw
 
-- If you were to copy and paste it into your browser, you should just see a line of unformatted text complaining that the password and key were incorrect because we have not supplied valid credentials.
+- If you were to copy and paste it into the address bar of your browser and try to visit this URL, you will just see a line of unformatted text complaining that the password and key were incorrect. This is because you have not supplied valid credentials: you would need to replace XXXXX and YYYYYYY with your Id and password.
 
-Let's break down the fields in the URL.
+Look closely at the URL and you'll see it contains a set of parameters separated by `&` symbols.
 
-| Field | Analysis |
+| Field | What it represents |
 |-------|----------|
 | https:// | Protocol |
 | weatherstation.wunderground.com  | web server DNS name |
@@ -32,13 +32,13 @@ All these parameters are needed to make a valid request. If they are not include
 
 If you wanted to add more readings, a temperature value for example,  simply add that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
 
-Obviously you have to know what the name of the parameter will be: in our example the 'humidity' was not too tricky to work out. But our weather station has two temperature sensors, one for air temperature and one for soil/ground. Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. You can see from the Weather Underground protocol that we'd need to use 'tempf' and 'soiltempf' as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you'll need to covert Celsius values before you upload them.
+Obviously you have to know what the name of the parameter will be: in our example the `humidity` was not too tricky to work out. But our weather station has two temperature sensors, one for air temperature and one for soil/ground. Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. You can see from the Weather Underground protocol that we'd need to use `tempf` and `soiltempf` as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them. 
 
 In fact, some of the other parameters use different units too:
 
 | Name | Units | Sensor |
 |-----|:----:|------|
-| winddir| degrees | wind direction|
+|winddir| degrees | wind direction|
 |windspeed| *mph* | wind speed|
 |windgust| *mph* | Wind gust speed|
 |rainin| *inches* | Rainfall|

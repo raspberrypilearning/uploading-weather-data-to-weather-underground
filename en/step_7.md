@@ -1,6 +1,6 @@
 ## Testing
 
-- Before you modify your weather station code to include a Weather Underground upload, it is a good idea to test your new section of code. Assemble all the various code elements above into a single file and then make up some test data for the normal Weather Station measurement variables:
+- If you're using an Oracle Weather Station, Before you modify your weather station code to include a Weather Underground upload, it is a good idea to test your new section of code. Assemble all the various code elements above into a single file and then make up some test data for the normal Weather Station measurement variables:
 
 | Measurement variable |
 |--------------------|

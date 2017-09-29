@@ -51,7 +51,7 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 - You need to look up what conversion factor is required to convert kilometers per hour to miles per hour.
 --- /hint ---
 --- hint ---
-- You should find that 1 km/h equals 0.621371 mph. Given that conversion factor, you will need to multiply your wind speed value in km/h by 0.0393701.
+- You should find that 1 km/h equals 0.621371 mph. Given that conversion factor, you will need to multiply your wind speed value in km/h by 0.621371.
 --- /hint ---
 --- hint ---
 - Write this as a Python function:

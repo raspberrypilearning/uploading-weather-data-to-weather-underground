@@ -10,9 +10,37 @@ One of the great things about Python is the huge number of libraries that people
     import requests
     ```
 
-Now you need to process each one of your weather readings.
+Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables.
 
-Start with a single measurement to check the process. For example, your humidity readings:
+   ```python
+   humidity = 55.998
+   ambient_temp = 23.456
+   pressure = 1067.890
+   ground_temp = 16.345
+   wind_speed = 5.6129
+   wind_gust = 12.9030
+   wind_average = 180
+   rainfall = 1.270
+
+
+1. Then add some variables to hold each part of the URL:
+
+    ```python
+    # create a string to hold the first part of the URL
+    WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
+    WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
+    WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
+    WUcreds = "ID=" + WU_station_id + "&PASSWORD="+ WU_station_pwd
+    date_str = "&dateutc=now"
+    action_str = "&action=updateraw""
+
+    ```
+
+    Note that you don't need to create a string for the time stamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
+
+    If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
+
+Start with a single measurement to check the process. For example, your humidity readings.
 
 1. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately.
 
@@ -23,23 +51,6 @@ This will make the final URL much easier to read, which will help if you need to
     ```python
     humidity_str = "{0:.2f}".format(humidity)
     ```
-
-1. Then add some variables to hold each part of the URL:
-
-    ```python
-    # create a string to hold the first part of the URL
-    WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
-    WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
-    WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
-    WUcreds = "ID=" + WUid + "&PASSWORD="+ WUpwd
-    date_str = "&dateutc=now"
-    action_str = "&action=updateraw""
-
-    ```
-
-    Note that you don't need to create a string for the time stamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
-
-    If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
 
 
 1. Now build the complete HTTP request, including your humidity value:
@@ -60,9 +71,9 @@ This will make the final URL much easier to read, which will help if you need to
     print("Received " + str(r.status_code) + " " + str(r.text))
 
     ```
+1. Test your work. Run the Python code (Press F5 if you're using Idle). If your upload completes without any errors you should see the message `Received 200 success`.
 
-
-- Now you need to repeat steps 1-2 above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
+- Now you need to repeat the process above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
 
 - To get started, write the code to take an atmospheric pressure reading called `pressure`, which is a floating-point number. Convert it from pascals to inches of mercury, and then turn it into a string called `pressure_in` rounded to two decimal places.
 
