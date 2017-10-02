@@ -30,7 +30,7 @@ All these parameters are needed to make a valid request. If they are not include
 
 To upload readings for other sensors too, a temperature value for example, simply append that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
 
-Obviously you have to know what the name of the parameter will be: in our example the `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What paramters shoudl you use?
+Obviously you have to know what the name of the parameter will be: in our example the `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What parameters should you use?
 
 Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. You can see from the Weather Underground protocol that we'd need to use `tempf` and `soiltempf` as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them.
 

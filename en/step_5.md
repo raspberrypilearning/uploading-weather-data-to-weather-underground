@@ -24,10 +24,9 @@ Let's define a Python function to perform the conversion. Open a new Python file
     print(hpa_to_inches(100))
     ```
 
-- Now run your code. It should display the answer: 2.953
+- Now run your code. It should display the answer: 2.9530000000003. That's a lot of decimal places! We'll deal with that later.
 
 Another unit involving inches is the amount of rainfall measurement. Write and test a function in Python to convert a rainfall value from mm to inches.
-
 
 --- hints ---
 --- hint ---
@@ -58,9 +57,10 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 --- hint ---
 - Write this as a Python function:
     ```python
-    def khm_to_mph(speed_in_kmh):
+    def kmh_to_mph(speed_in_kmh):
         speed_in_mph = speed_in_kmh * 0.621371
         return speed_in_mph    
     ```
 --- /hint ---
 --- /hints ---
+Before you move on to the next stage, make sure you have added all the conversion functions for your weather data to WU-upload.py.

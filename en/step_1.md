@@ -6,7 +6,7 @@ There are lots of ways to collect weather data with a Raspberry Pi. For example,
 - Connect environmental sensors to your GPIO pins and record measurements with some Python code.
 - Build a complete [Weather Station](https://www.raspberrypi.org/education/weather-station/) like the kits we recently sent to lucky schools around the world.
 
-Once you're collecting weather measurement, why not share your data with an online community like [Weather Underground](https://www.wunderground.com/)?
+Once you're collecting weather measurements, why not share your data with an online community like [Weather Underground](https://www.wunderground.com/)?
 
 Weather Underground brings together a global community of people who uploaded weather and air quality data. This data is displayed on the Weather Underground website, and can be used by other people, for example for forecasting. Many types of popular consumer weather stations can be used with Weather Underground, and the code for the Oracle Raspberry Pi school kit can also be modified to stream data in this way.
 

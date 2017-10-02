@@ -10,7 +10,7 @@ One of the great things about Python is the huge number of libraries that people
     import requests
     ```
 
-Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables. Add these lines underneath your library imports.
+Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables. Add these lines underneath your library imports. If you have an Oracle Weather Station, you should have:
 
    ```python
    humidity = 55.998
@@ -37,7 +37,7 @@ Now you need to develop the code to process each one of your weather readings. R
 
     ```
 
-    Note that you don't need to create a string for the time stamp of the reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
+    Note that you don't need to create a string for the time stamp of each reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
 
     If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
 
@@ -53,8 +53,7 @@ This will make the final URL much easier to read, which will help if you need to
     humidity_str = "{0:.2f}".format(humidity)
     ```
 
-
-1. Now build the complete HTTP request, including your humidity value:
+1. Now, at the bottom of the file, build the complete HTTP request, including your humidity value:
 
     ```python
     r= requests.get(
@@ -72,7 +71,9 @@ This will make the final URL much easier to read, which will help if you need to
     print("Received " + str(r.status_code) + " " + str(r.text))
 
     ```
-1. Test your work. Run the Python code (Press F5 if you're using Idle). If your upload completes without any errors you should see the message `Received 200 success`.
+1. Test your work. Run the Python code (Press F5 if you're using Idle). If your upload completes without any errors you should see the message `Received 200 success`. Now head over to your Weather Underground PWS page and verify that the data was indeed uploaded and is now being displayed.
+
+    ![](images/image5.png)
 
 - Now you need to repeat the process above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
 
