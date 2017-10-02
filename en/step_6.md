@@ -77,7 +77,7 @@ This will make the final URL much easier to read, which will help if you need to
 
 - Now you need to repeat the process above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
 
-- To get started, write the code to take an atmospheric pressure reading called `pressure`, which is a floating-point number. Convert it from pascals to inches of mercury, and then turn it into a string called `pressure_in` rounded to two decimal places.
+- To get started, write the code to take your atmospheric pressure reading, convert it from pascals to inches of mercury, and then turn it into a string called `pressure_in` rounded to two decimal places.
 
 --- hints ---
 --- hint ---
@@ -108,9 +108,18 @@ This will make the final URL much easier to read, which will help if you need to
 ---/hint---
 ---/hints---
 
-- You can then use the same process for all of your other weather readings. If you have an Oracle Weather Station kit, that will produce measurements for ambient as well as ground temperature, humidity, wind speed, wind direction and gusts, and rainfall. Some of these values will need to be converted into the appropriate units, others just need to be rounded.
+- You can then use the same process for all of your other weather readings. If you have an Oracle Weather Station kit, that will produce measurements for ambient & ground temperature, humidity, wind speed, wind direction and gusts, and rainfall. Some of these values will need to be converted into the appropriate units, others just need to be rounded.
 
 --- hints ---
+--- hint ---
+Use the functions that you wrote earlier to perform the conversions.
+--- /hint ---
+--- hint ---
+Then use *.format* to perform the rounding.
+    ```python
+    rounded_number = "{0:.2f}".format(number_with_dec_places)
+    ```
+--- /hint---
 --- hint ---
 - Your code should look like this:
     ```python
