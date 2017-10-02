@@ -29,7 +29,7 @@ You'll use the Python `requests` library to upload data from your weather sensor
 
 You can then use the Weather Underground widgets to display a weather summary on your own website.
 
-(<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>)
+<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IESHER4"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=pws250_both&weatherstationcount=IESHER4" width="250" height="150" border="0" alt="Weather Underground PWS IESHER4" /></a>
 
 ### What you will learn
 

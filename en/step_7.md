@@ -10,19 +10,18 @@
 
 --- hints ---
 --- hint ---
-If you get stuck, here is a basic example of a [simple data uploader based on the Sense Hat](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/master/en/resources/WU-sensehat-live.py) script.
+If you get stuck, here is a basic example of a [simple data uploader based on the Sense Hat](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/draft/en/resources/WU-sensehat-live.py) script.
 
 --- /hint ---
 --- hint ---
 Make your Python file executable:
-
     ```bash
     chmod +x /home/pi/WU-sensehat-live.py
     ```
+
 --- /hint ---
 --- hint ---
 Then add the following line to your crontab file:
-
     ```bash
     */5 * * * * /home/pi/WU-sensehat-live.py
     ```
@@ -38,7 +37,7 @@ Then add the following line to your crontab file:
 You may need to re-arrange your code somewhat so that only the lines which deal with measurement and upload are inside the loop. All  string definitions that do not change for each reading should be outside of the loop.
 --- /hint ---
 --- hint ---
-If you get stuck, here is a basic example of a [simple data uploader based on the Sense Hat](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/master/en/resources/WU-sensehat-live-loop.py) script.
+If you get stuck, here is a basic example of a [simple data uploader based on the Sense Hat](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/draft/en/resources/WU-sensehat-live-loop.py) script.
 
 --- /hint ---
 
@@ -55,7 +54,7 @@ If you've followed the [standard installation instructions](https://www.raspberr
 
 --- hints ---
 --- hint ---
-If you get stuck, here is a basic example of a [modified log_all_sensors.py](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/master/en/resources/log_all_sensorsWU.py) script.
+If you get stuck, here is a basic example of a [modified log_all_sensors.py](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/draft/en/resources/log_all_sensorsWU.py) script.
 
 --- /hint ---
 --- /hints ---

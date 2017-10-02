@@ -24,7 +24,7 @@ Now you need to develop the code to process each one of your weather readings. R
    ```
 
 
-1. Then add some variables to hold each part of the URL:
+ - Then add some variables to hold each part of the URL:
 
     ```python
     # create a string to hold the first part of the URL
@@ -43,7 +43,7 @@ Now you need to develop the code to process each one of your weather readings. R
 
 Start with a single measurement to check the process. For example, your humidity readings.
 
-1. Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately.
+ - Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately.
 
 [[[rounding-numbers-with-python]]]
 
@@ -53,7 +53,7 @@ This will make the final URL much easier to read, which will help if you need to
     humidity_str = "{0:.2f}".format(humidity)
     ```
 
-1. Now, at the bottom of the file, build the complete HTTP request, including your humidity value:
+ - Now, at the bottom of the file, build the complete HTTP request, including your humidity value:
 
     ```python
     r= requests.get(
@@ -65,13 +65,13 @@ This will make the final URL much easier to read, which will help if you need to
     ```
 
 
-1. If your upload fails for some reason, you may be able to get some useful debugging information from the status code that will be sent back by the Weather Underground server, so add a line to print this out.
+ - If your upload fails for some reason, you may be able to get some useful debugging information from the status code that will be sent back by the Weather Underground server, so add a line to print this out.
 
     ```python
     print("Received " + str(r.status_code) + " " + str(r.text))
-
     ```
-1. Test your work. Run the Python code (Press F5 if you're using Idle). If your upload completes without any errors you should see the message `Received 200 success`. Now head over to your Weather Underground PWS page and verify that the data was indeed uploaded and is now being displayed.
+
+- Test your work. Run the Python code (Press F5 if you're using Idle). If your upload completes without any errors you should see the message `Received 200 success`. Now head over to your Weather Underground PWS page and verify that the data was indeed uploaded and is now being displayed.
 
     ![](images/image5.png)
 
