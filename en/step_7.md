@@ -54,7 +54,7 @@ If you've followed the [standard installation instructions](https://www.raspberr
 
 --- hints ---
 --- hint ---
-If you get stuck, here is a basic example of a [modified log_all_sensors.py](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground-v2/blob/draft/en/resources/log_all_sensorsWU.py) script.
+If you get stuck, here is a basic example of a [modified log_all_sensors.py](resources/log_all_sensorsWU.py) script.
 
 --- /hint ---
 --- /hints ---
