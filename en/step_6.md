@@ -1,16 +1,16 @@
 ## Using Python to upload your data
 
-One of the great things about Python is the huge number of libraries that people have written and made available for free. Here you're going to use the `requests` module, so make sure you've installed it.
+One of the great things about Python is the huge number of libraries that people have written and made available for free. Here you're going to use the `requests` library, so make sure you've installed it.
 
 [[[generic-python-requests]]]
 
-- Now that you can make HTTP requests using Python, let's construct the code to send your Weather Station data to Weather Underground. First of all, import the Requests library. Add this line to the top of WU-upload.py.
+- Now that you can make HTTP requests using Python, let's construct the code to send your data to Weather Underground. First of all, import the Requests library. Add this line to the top of WU-upload.py.
 
     ```python
     import requests
     ```
 
-Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables.
+Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables. Add these lines underneath your library imports.
 
    ```python
    humidity = 55.998
@@ -21,6 +21,7 @@ Now you need to develop the code to process each one of your weather readings. R
    wind_gust = 12.9030
    wind_average = 180
    rainfall = 1.270
+   ```
 
 
 1. Then add some variables to hold each part of the URL:
@@ -128,6 +129,7 @@ This will make the final URL much easier to read, which will help if you need to
 
 --- hints ---
 --- hint ---
+- Your code should look like this:
     ```python
     r= requests.get(
         WUurl +

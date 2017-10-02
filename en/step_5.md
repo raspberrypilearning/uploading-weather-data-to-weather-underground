@@ -1,25 +1,27 @@
 ## Using Python to convert your data
 
-The Weather Underground protocol requires some measurement data to be in different units to those collected natively by our Raspberry Pi Weather Station.
+The Weather Underground protocol requires some measurement data to be in different units to those collected natively by the Raspberry Pi Oracle Weather Station or the SenseHat library functions.
 
-Let's start with atmospheric pressure. Our standard [Weather Station pressure sensor](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-9/worksheet/) records value in Pascals (Pa), and Weather Underground wants to receive this data in inches. If you search for how to convert between the two units, you may become confused, as there are several different ways of using inches in connection with pressure readings: pounds per square inch, inches of water, air, and mercury. The last one in that list, inches of mercury, is the most common and that's the one Weather Underground wants.
+Let's start with atmospheric pressure. Our standard [Weather Station pressure sensor](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-9/worksheet/) records value in Hectopascals (hPa), and Weather Underground wants to receive this data in inches. If you search for how to convert between the two units, you may become confused, as there are several different ways of using inches in connection with pressure readings: pounds per square inch, inches of water, air, and mercury. The last one in that list, inches of mercury, is the most common and that's the one Weather Underground wants.
+
+If you are using the SenseHat, your pressure data will be in millibars which fortunately are equivalent to hPa.
 
 Let's define a Python function to perform the conversion. Open a new Python file with Idle (or your favourite Python IDE) and save it into /home/pi as WU-upload.py.
 
 [[[generic-python-simple-functions]]]
 
-- To convert from Pa to inches of mercury, we need to multiply by 0.02953:
+- To convert from hPa to inches of mercury, we need to multiply by 0.02953:
 
     ```python
-    def pa_to_inches(pressure_in_pa):
-        pressure_in_inches_of_m = pressure_in_pa * 0.02953
+    def hpa_to_inches(pressure_in_hpa):
+        pressure_in_inches_of_m = pressure_in_hpa * 0.02953
         return pressure_in_inches_of_m
 
     ```
 - Test the function by adding the line:
 
     ```python
-    print(pa_to_inches(100))
+    print(hpa_to_inches(100))
     ```
 
 - Now run your code. It should display the answer: 2.953
