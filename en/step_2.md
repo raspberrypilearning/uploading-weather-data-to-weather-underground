@@ -26,10 +26,10 @@ _OR_
 - The latest version of Raspbian
 - Python3
 
-```bash
-sudo apt-get install python3
+    ```bash
+    sudo apt-get install python3
 
-```
+    ```
 - The Python `requests` library. It can be installed by opening a terminal window and typing:
 
     ```bash

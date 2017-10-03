@@ -17,7 +17,9 @@
 --- hints ---
 --- hint ---
 If you get stuck, here is a basic example of a simple data uploader based on the Sense Hat.
+
     ```python
+    
     #!/usr/bin/python3
     import requests
     from sense_hat import SenseHat
@@ -131,7 +133,7 @@ If you get stuck, here is a basic example of a simple data uploader based on the
 
         print("Received " + str(r.status_code) + " " + str(r.text))
         sleep(300)
-        ```
+    ```
 
 --- /hint ---
 

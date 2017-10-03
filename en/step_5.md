@@ -10,7 +10,7 @@ The Oracle [Weather Station pressure sensor](https://www.raspberrypi.org/learnin
 
 If you are using the SenseHat, your pressure data will be in millibars which fortunately are equivalent to hPa.
 
-Let's define a Python function to perform the conversion. Open a new Python file with Idle (or your favourite Python IDE) and save it into /home/pi as WU-upload.py. Create a function called hpa_to_inches that takes the data pressure_in_hpa as an argument.
+Let's define a Python function to perform the conversion. Open a new Python file with Idle (or your favourite Python IDE) and save it into /home/pi as WU-upload.py. Create a function called *hpa_to_inches* that takes the data *pressure_in_hpa* as an argument.
 
 [[[generic-python-simple-functions]]]
 
@@ -50,7 +50,7 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 --- /hints ---
 
 - SenseHat and Oracle Weather Station temperature sensors report their readings in Celsius so they need to be converted to Fahrenheit.
-Create a function called degc_to_degf that takes the data temperature_in_c as an argument.
+Create a function called *degc_to_degf* that takes the data *temperature_in_c* as an argument.
 
 --- hints ---
 --- hint ---

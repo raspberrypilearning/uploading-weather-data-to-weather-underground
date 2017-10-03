@@ -1,6 +1,6 @@
 ## Uploading data to Weather Underground
 
-To upload data to Weather Underground  you are going to use the standard HTTP protocol. This is what your web browser uses to fetch a web page whenever you're surfing the web.  Whenever you type a URL into the address bar or click a link on a web page, your browser will send an HTTP **GET** request to the web server asking for the page you want. Normally the page retrieved will be made of HTML and CSS code.  
+To upload data to Weather Underground  you are going to use the standard HTTP protocol. This is what your web browser uses to fetch a web page whenever you're surfing the web.  Whenever you type a URL into the address bar or click a link on a web page, your browser will send an HTTP **GET** request to the web server asking for the page you want.
 
 Things are a little different when HTTP requests are used to upload data.
 
