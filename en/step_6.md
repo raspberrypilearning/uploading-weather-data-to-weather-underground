@@ -47,6 +47,8 @@ Start with a single measurement to check the process. For example, your humidity
 
 [[[rounding-numbers-with-python]]]
 
+- So for your humidity measurements:
+
     ```python
     humidity_str = "{0:.2f}".format(humidity_str)
     ```
