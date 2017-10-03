@@ -60,3 +60,7 @@ If you get stuck, here is a basic example of a [modified log_all_sensors.py](res
 --- /hints ---
 
 --- /collapse ---
+
+Once you have data uploading regularly, you can use your Weather Underground PWS page to see how your local climate is changing over time.
+
+![](images/image4.png)
