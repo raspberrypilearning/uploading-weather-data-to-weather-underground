@@ -4,20 +4,22 @@ To upload data to Weather Underground  you are going to use the standard HTTP pr
 
 Things are a little different when HTTP requests are used to upload data.
 
-- Take a look at this example of sending data to Weather Underground:
+- Take a look at this example of sending data to Weather Underground. It might appear to be a normal Internet address but take a closer look: can you spot the data being uploaded? What type of measurement is being sent and what is the value of the reading?
 
 https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw
 
-- If you copy and paste it into the address bar of your browser and try to visit this URL, you will just see a line of unformatted text complaining that the password and key were incorrect. This is an error message sent by the server because you have not supplied valid credentials: you would need to replace XXXXX and YYYYYYY with your Id and password.
-
+--- collapse ---
+---
+title: Solution
+---
 Look closely at the URL and you'll see it contains a set of parameters separated by `&` symbols.
 
 | Field | What it represents |
 |-------|----------|
 | https:// | Protocol |
-| weatherstation.wunderground.com  | web server DNS name |
+| weatherstation.wunderground.com  | web server address |
 | /weatherstation/ | website directory path |
-| updateweatherstation.php? | PHP command |
+| updateweatherstation.php? | The program running on the web server to receive the data |
 | ID=XXXXX| Weather Station ID |
 | PASSWORD=YYYYYYY | Weather Underground Password |
 | dateutc=now | Date/time the measurement was made|
@@ -25,12 +27,15 @@ Look closely at the URL and you'll see it contains a set of parameters separated
 | action=updateraw | Tells the server what kind of data to expect |
 |||
 
+--- /collapse ---
+
+- If you copy and paste it into the address bar of your browser and try to visit this URL, you will just see a line of unformatted text complaining that the password and key were incorrect. This is an error message sent by the server because you have not supplied valid credentials: you would need to replace XXXXX and YYYYYYY with your Id and password.
 
 All these parameters are needed. If they are omitted, then the upload will fail. You have to include at least one item of weather measurement data, but it doesn't have to be the humidity reading.
 
-To upload readings for additional sensors - a temperature reading for example - simply append that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
+To upload readings for additional sensors - a temperature reading for example - add that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
 
-Obviously you have to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What parameters should you use?
+However, you have to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What parameters should you use?
 
 Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. You can see that we'd need to use `tempf` and `soiltempf` as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them.
 

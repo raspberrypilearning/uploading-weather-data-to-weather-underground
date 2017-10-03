@@ -29,17 +29,22 @@ Now you need to develop the code to process each one of your weather readings. R
     ```python
     # create a string to hold the first part of the URL
     WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
-    WU_station_id = "XXXXX" # Modify this variable so that in contains your PWS Id
-    WU_station_pwd = "YYYYYYY" # Modify this variable so that in contains your Password
+    WU_station_id = "XXXX" # Modify this variable so that in contains your PWS Id
+    WU_station_pwd = "YYYY" # Modify this variable so that in contains your Password
     WUcreds = "ID=" + WU_station_id + "&PASSWORD="+ WU_station_pwd
     date_str = "&dateutc=now"
     action_str = "&action=updateraw""
 
     ```
+    --- collapse ---
+    ---
+    title: Notes for Raspberry Pi Oracle Weather Station schools
+    ---
+    Note that you don't need to create a string for the time stamp of each reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you want to store weather readings and uploading them in bulk later, perhaps at the same time as you upload to the Oracle database,  you would need to format a time stamp for each record before sending it.
 
-    Note that you don't need to create a string for the time stamp of each reading. Weather Underground will create this value based on when it received the data if you use the parameter value 'now' in your HTTP request. If you were storing weather readings and uploading them in bulk later, you would need to format a time stamp for each record before sending it.
+    ---/collapse ---
 
-    If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
+    Don't forget to replace ```XXXX``` and ```YYYY``` with your Weather Underground PWS ID and password.  If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
 
 Start with a single measurement to check the process. For example, your humidity readings.
 
@@ -64,7 +69,7 @@ Start with a single measurement to check the process. For example, your humidity
         action_str)
     ```
 
- - If your upload fails for some reason, you may be able to get some useful debugging information from the status code that will be sent back by the Weather Underground server, so add a line to print this out.
+ - If your upload fails for some reason, you may be able to get some useful debugging information from the status code that will be sent back by the Weather Underground server. Add a line to print this out (this should not be indented).
 
     ```python
     print("Received " + str(r.status_code) + " " + str(r.text))
@@ -134,9 +139,15 @@ Then use *.format* to perform the rounding.
 ---/hint---
 ---/hints---
 
-- Finally, create the segment of the URL containing the measurement parameters and join it with the domain name and directory part of the URL which you stored in the `WUurl` variable.
+- Finally, put together the whole URL by combining the data measurements with the other variables needed for the complete Weather Underground upload request.  
 
 --- hints ---
+--- hint ---
+The complete URL will need the server address, the Weather Underground credentials, the timestamp and the action parameters.
+--- /hint ---
+--- hint ---
+These are stored in the variables: WUurl, WUcreds, date_str and action_str. Strings can be joined together using the **+** operator.
+--- /hint ---
 --- hint ---
 - Your code should look like this:
     ```python
