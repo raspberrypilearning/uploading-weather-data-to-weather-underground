@@ -48,12 +48,11 @@ Start with a single measurement to check the process. For example, your humidity
 [[[rounding-numbers-with-python]]]
 
 This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to present data that does not claim to be more accurate than it really is.
-
     ```python
-    humidity_str = "{0:.2f}".format(humidity)
+    humidity_str = "{0:.2f}".format(humidity_str)
     ```
 
- - Now, at the bottom of the file, build the complete HTTP request, including your humidity value:
+ - Now, at the bottom of the file, build the complete HTTP request, including your humidity value.
 
     ```python
     r= requests.get(
@@ -63,7 +62,6 @@ This will make the final URL much easier to read, which will help if you need to
         "&humidity=" + humidity_str +
         action_str)
     ```
-
 
  - If your upload fails for some reason, you may be able to get some useful debugging information from the status code that will be sent back by the Weather Underground server, so add a line to print this out.
 

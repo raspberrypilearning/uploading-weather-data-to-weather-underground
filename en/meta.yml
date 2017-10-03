@@ -15,7 +15,7 @@ steps:
   - title: Introduction
   - title: What you will need
   - title: Registering with Weather Underground
-  - title: The Weather Underground upload protocol
+  - title: Uploading data to Weather Underground 
   - title: Using Python to convert your data
   - title: Using Python to upload your data
   - title: Using live data
