@@ -43,11 +43,9 @@ Now you need to develop the code to process each one of your weather readings. R
 
 Start with a single measurement to check the process. For example, your humidity readings.
 
- - Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately.
+ - Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to present data that does not claim to be more accurate than it really is.
 
 [[[rounding-numbers-with-python]]]
-
-This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to present data that does not claim to be more accurate than it really is.
 
     ```python
     humidity_str = "{0:.2f}".format(humidity_str)
