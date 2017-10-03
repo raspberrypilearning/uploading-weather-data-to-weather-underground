@@ -50,5 +50,3 @@ If for any reason you need to install a package manually, follow these instructi
 ### Additional Resources
 
 - Weather Underground registration is only open to people 13 years and older. If you're under 13 years old you will need someone older to register on your behalf.
-
-- Some weather data.

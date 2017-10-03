@@ -14,7 +14,7 @@ title: Solution
 ---
 Look closely at the URL and you'll see it contains a set of parameters separated by `&` symbols.
 
-| Field | What it represents |
+| Parameter | What it represents |
 |-------|----------|
 | https:// | Protocol |
 | weatherstation.wunderground.com  | web server address |
@@ -31,13 +31,11 @@ Look closely at the URL and you'll see it contains a set of parameters separated
 
 - If you copy and paste it into the address bar of your browser and try to visit this URL, you will just see a line of unformatted text complaining that the password and key were incorrect. This is an error message sent by the server because you have not supplied valid credentials: you would need to replace XXXXX and YYYYYYY with your Id and password.
 
-All these parameters are needed. If they are omitted, then the upload will fail. You have to include at least one item of weather measurement data, but it doesn't have to be the humidity reading.
+All the parameters are needed. If any are omitted, then the upload will fail. You always have to include at least one item of weather measurement data, but it doesn't have to be the humidity reading.
 
-To upload readings for additional sensors - a temperature reading for example - add that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
+To upload readings for additional sensors - a temperature reading for example - add that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters. You also have to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground.
 
-However, you have to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What parameters should you use?
-
-Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. You can see that we'd need to use `tempf` and `soiltempf` as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them.
+Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. By looking at this specification you can see that we'd need to use `tempf` and `soiltempf` as our parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them.
 
 In fact, some of the other parameters use different units too:
 
