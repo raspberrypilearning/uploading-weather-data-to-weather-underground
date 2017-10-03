@@ -74,7 +74,7 @@ Start with a single measurement to check the process. For example, your humidity
 
     ![](images/image5.png)
 
-- Now you need to repeat the process above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
+- Now repeat the process above for each of your sensors. You may need to use the code you've already written to perform any required conversion.
 
 - To get started, write the code to take your atmospheric pressure reading, convert it from pascals to inches of mercury, and then turn it into a string called `pressure_in` rounded to two decimal places.
 
@@ -107,7 +107,7 @@ Start with a single measurement to check the process. For example, your humidity
 ---/hint---
 ---/hints---
 
-- You can then use the same process for all of your other weather readings. If you have an Oracle Weather Station kit, that will produce measurements for ambient & ground temperature, humidity, wind speed, wind direction and gusts, and rainfall. Some of these values will need to be converted into the appropriate units, others just need to be rounded.
+- You can use the same process for all of your other weather readings. If you have an Oracle Weather Station kit, that will produce measurements for ambient & ground temperature, humidity, wind speed, wind direction and gusts, and rainfall. Some of these values will need to be converted into the appropriate units, others just need to be rounded.
 
 --- hints ---
 --- hint ---
@@ -134,7 +134,7 @@ Then use *.format* to perform the rounding.
 ---/hint---
 ---/hints---
 
-- Finally you can create the segment of the URL containing the measurement parameters and join it with the domain name and directory part of the URL which you stored in the `WUurl` variable.
+- Finally, create the segment of the URL containing the measurement parameters and join it with the domain name and directory part of the URL which you stored in the `WUurl` variable.
 
 --- hints ---
 --- hint ---

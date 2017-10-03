@@ -45,7 +45,7 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 --- /hint ---
 --- /hints ---
 
-- The final conversion that you need to make is for the wind speeds. The code used to [process Weather Station kit anemometer readings](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-2/worksheet/) provides values in km/h, whereas Weather Underground is expecting mph.
+- A final conversion that you might need to make is for wind speeds. The code used to [process Weather Station kit anemometer readings](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-2/worksheet/) provides values in km/h, whereas Weather Underground is expecting mph.
 
 --- hints ---
 --- hint ---

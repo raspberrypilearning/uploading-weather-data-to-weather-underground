@@ -21,14 +21,14 @@ Look closely at the URL and you'll see it contains a set of parameters separated
 | ID=XXXXX| Weather Station ID |
 | PASSWORD=YYYYYYY | Weather Underground Password |
 | dateutc=now | Date/time the measurement was made|
-| humidity=59 | A weather measurement, in this case, the Humidity reading |
+| humidity=59 | A weather measurement, in this case, the Humidity reading of 59%|
 | action=updateraw | Tells the server what kind of data to expect |
 |||
 
 
 All these parameters are needed. If they are omitted, then the upload will fail. You have to include at least one item of weather measurement data, but it doesn't have to be the humidity reading.
 
-To upload readings for additional sensors - a temperature value for example - simply append that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
+To upload readings for additional sensors - a temperature reading for example - simply append that into the URL, making sure you use the `&` symbol to keep it separate from the other parameters.
 
 Obviously you have to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle weather station has two temperature sensors, one for air temperature and one for soil/ground. What parameters should you use?
 
