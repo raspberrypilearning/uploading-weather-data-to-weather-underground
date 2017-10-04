@@ -19,7 +19,6 @@
 If you get stuck, here is a basic example of a simple data uploader based on the Sense Hat.
 
     ```python
-    
     #!/usr/bin/python3
     import requests
     from sense_hat import SenseHat
@@ -103,7 +102,6 @@ If you get stuck, here is a basic example of a simple data uploader based on the
     def degc_to_degf(temperature_in_c):
         temperature_in_f = (temperature_in_c * (9/5.0)) + 32
         return temperature_in_f
-
 
     WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
     WU_station_id = "ICAMBRID157"
