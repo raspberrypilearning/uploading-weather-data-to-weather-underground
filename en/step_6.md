@@ -10,7 +10,7 @@ One of the great things about Python is the huge number of libraries that people
     import requests
     ```
 
-Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables. Add these lines underneath your library imports. If you have an Oracle Weather Station, you should have:
+- Now you need to develop the code to process each one of your weather readings. Rather than use actual measurements from your sensors during this development stage, create some test data as Python variables. Add these lines underneath your library imports. If you have an Oracle Weather Station, you should have:
 
    ```python
    humidity = 55.998
@@ -46,7 +46,7 @@ Now you need to develop the code to process each one of your weather readings. R
 
     Don't forget to replace ```XXXX``` and ```YYYY``` with your Weather Underground PWS ID and password.  If you can't find where you noted down the Personal Weather Station (PWS) credentials which Weather Underground issued you, you can always look them up [here](https://www.wunderground.com/personal-weather-station/mypws){:target="_blank"}.
 
-Start with a single measurement to check the process. For example, your humidity readings.
+- Start with a single measurement to check the process. For example, your humidity readings.
 
  - Unless you're using very expensive sensors, the readings probably won't be accurate to more than a couple of decimal places so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to present data that does not claim to be more accurate than it really is.
 
