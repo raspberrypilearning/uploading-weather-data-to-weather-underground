@@ -1,6 +1,6 @@
 ## Registering with Weather Underground
 
-You don't need to use a Pi for this step, so don't worry if you've installed a 'lite' version of Raspbian.  If you are using the Raspbian Desktop, we recommend that you install and use Firefox:
+Registration for Weather Underground is via their website. You don't need to use a Pi for this step, so don't worry if you've installed a 'lite' version of Raspbian.  If you are using the Raspbian Desktop, we recommend that you install and use Firefox:
 
 ```bash
 sudo apt-get install firefox-esr
