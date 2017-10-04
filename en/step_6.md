@@ -4,7 +4,7 @@ One of the great things about Python is the huge number of libraries that people
 
 [[[generic-python-requests]]]
 
-- Now that you can make HTTP requests using Python, let's construct the code to send your data to Weather Underground. First of all, import the Requests library. Add this line to the top of WU-upload.py.
+- Now that you can make HTTP requests using Python, let's construct the code to send your data to Weather Underground. First of all, import the Requests library. Add this line to the top of `WU-upload.py`.
 
     ```python
     import requests
