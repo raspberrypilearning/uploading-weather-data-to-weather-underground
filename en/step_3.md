@@ -11,7 +11,7 @@ To be able to display your weather data, you will need to register for an accoun
 
 - Visit the [Weather Underground registration page ](https://www.wunderground.com/signup){:target="_blank"}. Supply an email address and choose a password.  You'll need to check the box to confirm that you agree with their terms of service.  If you're under 13 years old, you'll need to have an adult register on your behalf.  Click **Sign up for free** when you're ready.
 
-- A  message will be sent to the email address that you provide, and you'll need to click on the **Validate your email** button that it contains. If you don't receive a validation email, check your Spam folder. If you still can't find it, you can request it again using the **Send Validation Email** button on the Add Weather Station page.
+- A  message will be sent to the email address that you provide, and you'll need to click on the **Validate your email** button that it contains. If you don't receive a validation email, check your Spam folder. If you still can't find it, you can request it again using the **Send Validation Email** button on the Add Weather Station page. If you find that you are continually being asked to validate your account even after having followed the emailed link, you should clear your browser cookies.
 
 ![](images/image1.png)
 

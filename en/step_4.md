@@ -48,4 +48,4 @@ In fact, some of the other parameters use different units too:
 |baromin| *inches* | Pressure|
 |||
 
-- Make a list of the data collected by your sensors, and use the information above to see if you need to perform any conversions before uploading your data. If your weather station has other sensors not covered here, you can refer to the protocol specification to see if they are accepted by Weather Underground.
+- If you have a custom Weather Station, make a list of the data collected by your sensors, and use the information above to see if you need to perform any conversions before uploading your data. If your weather station has other sensors not covered here, you can refer to the protocol specification to see if they are accepted by Weather Underground.

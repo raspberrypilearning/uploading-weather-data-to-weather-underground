@@ -10,7 +10,11 @@ The Oracle [Weather Station pressure sensor](https://www.raspberrypi.org/learnin
 
 If you are using the SenseHat, your pressure data will be in millibars which fortunately are equivalent to hPa.
 
-Let's define a Python function to perform the conversion. Open a new Python file with Idle (or your favourite Python IDE) and save it into `/home/pi` as `WU-upload.py`. Create a function called `hpa_to_inches` that takes the data `pressure_in_hpa` as an argument.
+Let's define a Python function to perform the conversion.
+
+- Open a new Python file with Idle (or your favourite Python IDE) and save it into `/home/pi` as `WU-upload.py`.
+
+- Create a function called `hpa_to_inches` that takes the data `pressure_in_hpa` as an argument.
 
 [[[generic-python-simple-functions]]]
 
@@ -60,11 +64,11 @@ Create a function called `degc_to_degf` that takes the data `temperature_in_c` a
 - This formula is trickier than a simple multiplication. You need to multiply by 9/5 *and then* add 32.
 --- /hint ---
 --- hint ---
-    ```python
-    def degc_to_degf(temperature_in_c):
-        temperature_in_f = (temperature_in_c * (9/5.0)) + 32
-        return temperature_in_f
-    ```
+```python
+def degc_to_degf(temperature_in_c):
+    temperature_in_f = (temperature_in_c * (9/5.0)) + 32
+    return temperature_in_f
+```
     --- /hint ---
     --- /hints ---   
 

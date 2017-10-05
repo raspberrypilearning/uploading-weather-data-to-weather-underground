@@ -33,7 +33,7 @@ One of the great things about Python is the huge number of libraries that people
     WU_station_pwd = "YYYY" # Modify this variable so that in contains your Password
     WUcreds = "ID=" + WU_station_id + "&PASSWORD="+ WU_station_pwd
     date_str = "&dateutc=now"
-    action_str = "&action=updateraw""
+    action_str = "&action=updateraw"
 
     ```
     --- collapse ---
@@ -55,7 +55,7 @@ One of the great things about Python is the huge number of libraries that people
 - So for your humidity measurements:
 
     ```python
-    humidity_str = "{0:.2f}".format(humidity_str)
+    humidity_str = "{0:.2f}".format(humidity)
     ```
 
  - Now, at the bottom of the file, build the complete HTTP request, including your humidity value.
@@ -87,9 +87,7 @@ One of the great things about Python is the huge number of libraries that people
 --- hint ---
 - You can use the function you wrote earlier to perform the unit conversion.
     ```python
-    def pa_to_inches(pressure_in_pa):
-        pressure_in_inches_of_m = pressure_in_pa * 0.02953
-        return pressure_in_inches_of_m
+    pressure = hpa_to_inches(pressure_in_hpa)
     ```
 --- /hint ---
 --- hint ---
