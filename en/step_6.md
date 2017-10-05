@@ -28,7 +28,8 @@ One of the great things about Python is the huge number of libraries that people
 
     ```python
     # create a string to hold the first part of the URL
-    WUurl = "https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?"
+    WUurl = "https://weatherstation.wunderground.com/weatherstation
+    \/updateweatherstation.php?"
     WU_station_id = "XXXX" # Modify this variable so that in contains your PWS Id
     WU_station_pwd = "YYYY" # Modify this variable so that in contains your Password
     WUcreds = "ID=" + WU_station_id + "&PASSWORD="+ WU_station_pwd
