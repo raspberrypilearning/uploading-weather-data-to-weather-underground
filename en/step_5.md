@@ -45,11 +45,11 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 --- /hint ---
 --- hint ---
 - Write this as a Python function:
-    ```python
-    def mm_to_inches(rainfall_in_mm):
-        rainfall_in_inches = rainfall_in_mm * 0.0393701
-        return rainfall_in_inches
-    ```
+```python
+def mm_to_inches(rainfall_in_mm):
+    rainfall_in_inches = rainfall_in_mm * 0.0393701
+    return rainfall_in_inches
+```
 --- /hint ---
 --- /hints ---
 
