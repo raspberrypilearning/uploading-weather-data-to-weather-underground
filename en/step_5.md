@@ -56,39 +56,39 @@ def mm_to_inches(rainfall_in_mm):
 - SenseHat and Oracle Weather Station temperature sensors report their readings in Celsius so they need to be converted to Fahrenheit.
 Create a function called `degc_to_degf` that takes the data `temperature_in_c` as an argument and returns the result in Fahrenheit.
 
---- hints ---
---- hint ---
-- You need to find out what conversion factor is required to convert Celsius to Fahrenheit.
---- /hint ---
---- hint ---
-- This formula is trickier than a simple multiplication. You need to multiply by 9/5 *and then* add 32.
---- /hint ---
---- hint ---
+---hints---
+---hint---
+You need to find out what conversion factor is required to convert Celsius to Fahrenheit.
+---/hint---
+---hint---
+This formula is trickier than a simple multiplication. You need to multiply by 9/5 *and then* add 32.
+---/hint---
+---hint---
 ```python
 def degc_to_degf(temperature_in_c):
     temperature_in_f = (temperature_in_c * (9/5.0)) + 32
     return temperature_in_f
 ```
-    --- /hint ---
-    --- /hints ---   
+---/hint---
+---/hints---   
 
 
 - A final conversion that you might need to make is for wind speeds. The code used to [process Weather Station kit anemometer readings](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-2/worksheet/) provides values in km/h, whereas Weather Underground is expecting mph.
 
---- hints ---
---- hint ---
-- You need to look up what conversion factor is required to convert kilometers per hour to miles per hour.
---- /hint ---
---- hint ---
-- You should find that 1 km/h equals 0.621371 mph. Given that conversion factor, you will need to multiply your wind speed value in km/h by 0.621371.
---- /hint ---
---- hint ---
-- Write this as a Python function:
-    ```python
-    def kmh_to_mph(speed_in_kmh):
-        speed_in_mph = speed_in_kmh * 0.621371
-        return speed_in_mph    
-    ```
---- /hint ---
---- /hints ---
+---hints---
+---hint---
+You need to look up what conversion factor is required to convert kilometers per hour to miles per hour.
+---/hint---
+---hint---
+You should find that 1 km/h equals 0.621371 mph. Given that conversion factor, you will need to multiply your wind speed value in km/h by 0.621371.
+---/hint---
+---hint---
+Write this as a Python function:
+```python
+def kmh_to_mph(speed_in_kmh):
+    speed_in_mph = speed_in_kmh * 0.621371
+    return speed_in_mph    
+```
+---/hint---
+---/hints---
 Before you move on to the next stage, make sure you have added all the conversion functions for your weather data to `WU-upload.py`.
