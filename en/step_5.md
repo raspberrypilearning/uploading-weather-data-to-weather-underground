@@ -36,22 +36,22 @@ print(hpa_to_inches(100))
 
 Another unit involving inches is the amount of rainfall measurement. Write and test a function in Python to convert a rainfall value from mm to inches.
 
---- hints ---
---- hint ---
+---hints---
+---hint---
 You need to find out what conversion factor is required to convert mm to inches. You could estimate this simply by looking a ruler. For a more accurate answer, you could search online.
---- /hint ---
---- hint ---
+---/hint---
+---hint---
 You should find that 1 millimetre equals 0.0393701 inches. Given that conversion factor, you will need to multiply your rainfall value in mm by 0.0393701.
---- /hint ---
---- hint ---
+---/hint---
+---hint---
 Write this as a Python function:
 ```python
 def mm_to_inches(rainfall_in_mm):
     rainfall_in_inches = rainfall_in_mm * 0.0393701
     return rainfall_in_inches
 ```
---- /hint ---
---- /hints ---
+---/hint---
+---/hints---
 
 - SenseHat and Oracle Weather Station temperature sensors report their readings in Celsius so they need to be converted to Fahrenheit.
 Create a function called `degc_to_degf` that takes the data `temperature_in_c` as an argument and returns the result in Fahrenheit.
