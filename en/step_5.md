@@ -20,17 +20,17 @@ Let's define a Python function to perform the conversion.
 
 - To convert from hPa to inches of mercury, we need to multiply by 0.02953 and return the result.
 
-    ```python
-    def hpa_to_inches(pressure_in_hpa):
-        pressure_in_inches_of_m = pressure_in_hpa * 0.02953
-        return pressure_in_inches_of_m
+```python
+def hpa_to_inches(pressure_in_hpa):
+    pressure_in_inches_of_m = pressure_in_hpa * 0.02953
+    return pressure_in_inches_of_m
 
-    ```
+```
 - Test the function by adding the line below. This is not part of the function declaration so make sure you don't indent it.
 
-    ```python
-    print(hpa_to_inches(100))
-    ```
+```python
+print(hpa_to_inches(100))
+```
 
 - Now run your code. It should display the answer: 2.9530000000003. That's a lot of decimal places! We'll deal with that later.
 
@@ -38,13 +38,13 @@ Another unit involving inches is the amount of rainfall measurement. Write and t
 
 --- hints ---
 --- hint ---
-- You need to find out what conversion factor is required to convert mm to inches. You could estimate this simply by looking a ruler. For a more accurate answer, you could search online.
+You need to find out what conversion factor is required to convert mm to inches. You could estimate this simply by looking a ruler. For a more accurate answer, you could search online.
 --- /hint ---
 --- hint ---
-- You should find that 1 millimetre equals 0.0393701 inches. Given that conversion factor, you will need to multiply your rainfall value in mm by 0.0393701.
+You should find that 1 millimetre equals 0.0393701 inches. Given that conversion factor, you will need to multiply your rainfall value in mm by 0.0393701.
 --- /hint ---
 --- hint ---
-- Write this as a Python function:
+Write this as a Python function:
 ```python
 def mm_to_inches(rainfall_in_mm):
     rainfall_in_inches = rainfall_in_mm * 0.0393701
