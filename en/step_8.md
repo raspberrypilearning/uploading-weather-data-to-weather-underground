@@ -1,5 +1,5 @@
 
-## Challenge: Add weather stickers to your website
+## Challenge: add weather stickers to your website
 
 - Weather Underground provide a [range of cool html stickers](https://www.wunderground.com/stickers/) that allow you to embed a weather widget into a web page. Can you add one for your Weather Station data into your blog or other website?
 
