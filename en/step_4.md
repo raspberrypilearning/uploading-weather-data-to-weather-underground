@@ -23,7 +23,6 @@ Look closely at the URL, and you'll see it contains a set of parameters separate
 | dateutc=now | Date/time the measurement was made|
 | humidity=59 | A weather measurement, in this case the humidity reading 59%|
 | action=updateraw | The kind of data the server will receive |
-|||
 
 --- /collapse ---
 
@@ -44,6 +43,5 @@ In fact, some of the other parameters require different units too:
 |windgust| **mph** | Wind gust speed|
 |rainin| **inches** | Rainfall|
 |baromin| **inches** | Pressure|
-|||
 
 - If you have a custom weather station, make a list of the data collected by your sensors, and use the information above to see if you need to perform any conversions before uploading your data. If your weather station has other sensors not covered here, you can refer to the protocol specification to see if they are accepted by Weather Underground.
