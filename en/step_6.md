@@ -41,7 +41,7 @@ One of the great things about Python is the huge number of libraries that people
     ---
     title: Notes for Raspberry Pi Oracle Weather Station schools
     ---
-    Note that you don't need to create a string for the time stamp of each reading. Weather Underground will create this value based on when it received the data if you use the parameter value `now` in your HTTP request. If you want to store weather readings and upload them in bulk later, perhaps at the same time as you upload to the Oracle database, you will need to format a time stamp for each record before sending it.
+    Note that you don't need to create a string for the timestamp of each reading. Weather Underground will create this value based on when it received the data if you use the parameter value `now` in your HTTP request. If you want to store weather readings and upload them in bulk later, perhaps at the same time as you upload to the Oracle database, you will need to format a timestamp for each record before sending it.
 
     ---/collapse ---
 
