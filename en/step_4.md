@@ -1,46 +1,48 @@
-## The Weather Underground upload protocol
 
-- The method for uploading data to Weather Underground uses the standard http protocol to send data. You'll probably be familiar with the format of http requests from using a web browser to visit web sites. Whenever you type a URL into the address bar  or click a link on a web page, your browser software will send an http request - called a *get* request -  to the webs server asking for the page you want to see. Normally the page retrieved will be made of [html and css](https://www.raspberrypi.org/learning/coder-html-css-lessons/).  Things are a little different when http requests are use to upload data, as with Weather Underground.
+## Uploading data to Weather Underground
 
-- Take a look at this example:
+To upload data to Weather Underground  you are going to use the standard HTTP protocol. This is what your web browser uses to fetch a page whenever you're surfing the web. When you type a URL into the address bar or click a link on a website, your browser will send an HTTP **GET** request to the web server asking for the page you want.
 
-[https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw](https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw)
+- Take a look at this example of sending data to Weather Underground. It might appear to be a normal internet address, but take a closer look: can you spot the data being uploaded? What type of measurement is being sent and what is the value of the reading?
 
-- If you click on this link or copy and paste it into your browser, you should just see a line of unformatted text complaining that the password and key were incorrect. Let's break down the fields in the URL.
+https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=XXXXX&PASSWORD=YYYYYYY&dateutc=now&humidity=59&action=updateraw
 
-| Field | Analysis |
+--- collapse ---
+---
+title: Solution
+---
+Look closely at the URL, and you'll see it contains a set of parameters separated by `&` symbols.
+
+| Parameter | What it represents |
 |-------|----------|
 | https:// | Protocol |
-| weatherstation.wunderground.com  | webserver DNS name |
-| /weatherstation/ | website directory path |
-| updateweatherstation.php? | PHP command |
-| ID=XXXXX| 1st parameter |
-| & | field separator |
-| PASSWORD=YYYYYYY | 2nd parameter |
-| & | field separator |
-| dateutc=now | 3rd parameter |
-| & | field separator |
-| humidity=59 | 5th parameter |
-| & | field separator |
-| action=updateraw | final parameter |
-|||
+| weatherstation.wunderground.com  | Web server address |
+| /weatherstation/ | Website directory path |
+| updateweatherstation.php? | The program running on the web server to receive the data |
+| ID=XXXXX| Weather Station ID |
+| PASSWORD=YYYYYYY | Weather Underground password |
+| dateutc=now | Date/time the measurement was made|
+| humidity=59 | A weather measurement, in this case the humidity reading 59%|
+| action=updateraw | The kind of data the server will receive |
 
+--- /collapse ---
 
-- The first 2 fields look like a normal request for a webpage where the server's address and location on the directory tree are specified. Then we have the PHP command: PHP is a hugely populars open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. WeatherUnderground use PHP to handle the upload process. The rest of the URL consists of various parameters separated by an & symbol. You can see that first of all there is the ID of the weather station and password needed to add new records. These parameters are compulsory and must be part of any request to upload to Weather Underground.  Then there are the actual weather values themselves, in this case the time of the measurement and a single humidity reading. Finally there is the 'action' parameter - also compulsory -  which tells the server what sort of data to expect.
+- If you copy and paste this URL into the address bar of your browser and press enter, you will just see a line of unformatted text complaining that the password and key were incorrect. This is an error message sent by the server because you have not supplied valid credentials: you would need to replace `XXXXX` and `YYYYYYY` with your ID and password.
 
-- If we wanted to add more readings, a temperature value for example, we would simply add that into the URL, making sure we use the **&** symbol to keep it separate from the other parameters.
+All the parameters are needed. If any are omitted, then the upload will fail. You always have to include at least one item of weather measurement data, but it doesn't have to be a humidity reading.
 
-- Obviously you have to know what the name of the parameter will be: in our example the 'humidity' was not too tricky to work out. But our weather station has two temperature sensors, one for air temperature and one for soil/ground. Fortunately, most providers of services like this will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol) you need. You can see from the Weather Underground protocol that we'd need to use *tempf* and *soiltempf*. It's also important to note that  Weather Underground expects these readings to be supplied in Fahrenheit, so you'll need to covert our Celsius values before we upload them.
+To upload readings for additional sensors, a temperature reading for example, add it into the URL, making sure you use the `&` symbol to keep it separate from the other parameters. You also need to know what Weather Underground calls this measurement. In our example, `humidity` was not too tricky to work out. But the Oracle Weather Station has two temperature sensors, one for air temperature and one for soil/ground.
 
-- In fact some of the other parameters use different units too:
+Fortunately, most providers of services like Weather Underground will [publish the details](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol){:target="_blank"} you need. Looking at this document, you can see that you'd need to use `tempf` and `soiltempf` as parameter names. It's also important to note that Weather Underground expects these readings to be supplied in Fahrenheit, so you may need to covert Celsius values before you upload them.
+
+In fact, some of the other parameters require different units too:
 
 | Name | Units | Sensor |
 |-----|:----:|------|
-| winddir| degrees | wind direction|
-|windspeed| *mph* | wind speed|
-|windgust| *mph* | Wind gust speed|
-|rainin| *inches* | Rainfall|
-|baromin| *inches* | Pressure|
-|||
+|winddir| degrees | wind direction|
+|windspeed| **mph** | wind speed|
+|windgust| **mph** | Wind gust speed|
+|rainin| **inches** | Rainfall|
+|baromin| **inches** | Pressure|
 
-- Make a list of the data collected by your sensors and use the protocol specifications to see if you need to perform any conversions before uploading your data.
+- If you have a custom weather station, make a list of the data collected by your sensors, and use the information above to see if you need to perform any conversions before uploading your data. If your weather station has other sensors not covered here, you can refer to the protocol specification to see if they are accepted by Weather Underground.
