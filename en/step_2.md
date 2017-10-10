@@ -7,7 +7,7 @@ title: Notes for Raspberry Pi Oracle Weather Station schools
 
 If you are using one of our Oracle Weather Station kits, or have designed your own version, this guide assumes that you have already built and installed it. If you have not done that yet, follow [these instructions](https://www.raspberrypi.org/learning/weather-station-guide/), and then come back here when you've finished!
 
-The steps in this guide assume that you will be continuously uploading data to Weather Underground. You can do this *and* continue to upload data to the Oracle database. If you have limited bandwidth or poor connectivity between your station and the internet, then you might want to consider a configuration that sends data every 15 minutes. The Weather Underground website will not display any data older than 20 minutes, so batch uploads of data are only really useful for historical storage. If you have one of out school Weather Station kits and frequent uploads cause problems, then you should probably stick to only using the Oracle database as described in the standard software build guide.
+This guide assumes that you will be continuously uploading data to Weather Underground. You can do this **and** continue to upload data to the Oracle database. If you have limited bandwidth or poor connectivity between your station and the internet, then you might want to consider a configuration that sends data every 15 minutes. The Weather Underground website will not display any data older than 20 minutes, so batch uploads of data are only really useful for historical storage. If you have one of out school Weather Station kits and frequent uploads cause problems, then you should probably stick to only using the Oracle database as described in the standard software build guide.
 
 --- /collapse ---
 
@@ -17,20 +17,19 @@ The steps in this guide assume that you will be continuously uploading data to W
 - A Raspberry Pi
 - A Raspberry Pi Oracle Weather Station kit
 _OR_
-- An equivalent set or sub-set of sensors. For example you could use
- a Sense HAT, or a [Pimoroni Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat){:target="_blank"} which you can connect to the Pi
+- An equivalent set or sub-set of sensors you can connect to the Pi, for example a [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) or a [Pimoroni Enviro pHAT](https://shop.pimoroni.com/products/enviro-phat){:target="_blank"}
 
 
 ### Software
 
 - The latest version of Raspbian
-- Python3
+- Python 3
 
     ```bash
     sudo apt-get install python3
 
     ```
-- The Python `requests` library. It can be installed by opening a terminal window and typing:
+- The Python requests library, which can be installed by opening a terminal window and typing:
 
     ```bash
     sudo pip3 install requests
@@ -47,6 +46,6 @@ If for any reason you need to install a package manually, follow these instructi
 
 [[[rpi-install-software]]]
 
-### Additional Resources
+### Additional notes
 
-- Weather Underground registration is only open to people 13 years and older. If you're under 13 years old you will need someone older to register on your behalf.
+- Weather Underground registration is only open to people 13 years and older. If you're under 13 years old, you will need someone older to register on your behalf.
