@@ -1,3 +1,4 @@
+
 ## Using live data
 
 - For testing and development, you used some made-up data values, stored as variables in your code. Once you've tested your upload, you should delete these and use the code to process real data from your weather station.
@@ -153,3 +154,4 @@ If you get stuck, here is a basic example of a [modified log_all_sensors.py](res
 Once you have data uploading regularly, you can use your Weather Underground PWS page to see how your local climate is changing over time.
 
 ![](images/image4.png)
+
