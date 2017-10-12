@@ -6,7 +6,7 @@ theme: orange
 duration: 2
 listed: false
 ingredient: false
-copyedit: false
+copyedit: true
 interests: "weather"
 technologies: "web"
 curriculum: creator
