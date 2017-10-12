@@ -52,7 +52,7 @@ One of the great things about Python is the huge number of libraries that people
 
  - Unless you're using very expensive sensors, your reading probably won't be accurate to more than a couple of decimal places, so you can also round them appropriately. This will make the final URL much easier to read, which will help if you need to do any debugging. It is also good practice to present data that does not claim to be more accurate than it really is.
 
-[[[rounding-numbers-with-python]]]
+[[[generic-python-rounding-numbers]]]
 
 - So for your humidity measurement, do this:
 
