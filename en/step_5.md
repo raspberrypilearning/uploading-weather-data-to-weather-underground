@@ -4,8 +4,6 @@ The Weather Underground protocol requires some measurement data to be in differe
 
 Let's start with atmospheric pressure.
 
-[[[generic-theory-what-is-pressure]]]
-
 The Oracle [Weather Station pressure sensor](https://www.raspberrypi.org/learning/sensing-the-weather/lesson-9/worksheet/) records value in Hectopascals (hPa), and Weather Underground wants to receive this data in inches. If you search for how to convert between the two units, it is easy to become confused, as there are several different ways of using inches in connection with pressure readings: pounds per square inch, inches of water, air, and mercury. The last one in that list, **inches of mercury**, is the most common and that's the one Weather Underground wants.
 
 If you are using the Sense HAT, your pressure data will be in millibars, which fortunately are equivalent to hPa.
