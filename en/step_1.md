@@ -24,5 +24,6 @@ You can then use the Weather Underground widgets to display a weather summary on
 
 This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum){:target="_blank"}:
 
-+ [Apply programming constructs to solve a problem](https://curriculum.raspberrypi.org/programming/developer/){:target="_blank"}
-+ [Combine inputs and/or outputs to create projects or solve a problem](https://www.raspberrypi.org/curriculum/physical-computing/ddeveloper){:target="_blank"}
++ [Apply programming constructs to solve a problem](https://curriculum.raspberrypi.org/programming/developer)
+
++ [Combine inputs and/or outputs to create projects or solve a problem](https://www.raspberrypi.org/curriculum/physical-computing/developer)
