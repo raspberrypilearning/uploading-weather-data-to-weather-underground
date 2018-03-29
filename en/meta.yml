@@ -1,22 +1,26 @@
 title: Uploading weather data to Weather Underground
 hero_image: images/banner.png
 description: Upload your climate measurements to Weather Underground
-original_url:
+original_url: 
 theme: orange
 duration: 2
 listed: true
 ingredient: false
 copyedit: true
-interests: "weather"
-technologies: "html/css"
-curriculum: creator, design-0, programming-1, phys-comp-0, manufacture-0, community-0
-site_areas:
-steps:
-  - title: Introduction
-  - title: What you will need
-  - title: Registering with Weather Underground
-  - title: Uploading data to Weather Underground
-  - title: Using Python to convert your data
-  - title: Using Python to upload your data
-  - title: Using live data
-  - title: 'Challenge: add weather stickers to your website'
+interests: ''
+technologies: html-css-javascript
+curriculum: 2, design-0, programming-2, phys-comp-2, manufacture-0, community-0
+site_areas: projects
+hardware: ''
+software: html-css-javascript
+version: 4
+last_tested: 2017-11-01
+steps: 
+- title: Introduction
+- title: What you will need
+- title: Registering with Weather Underground
+- title: Uploading data to Weather Underground
+- title: Using Python to convert your data
+- title: Using Python to upload your data
+- title: Using live data
+- title: 'Challenge: add weather stickers to your website'
