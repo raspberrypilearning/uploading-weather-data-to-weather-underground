@@ -1,3 +1,5 @@
+This is an archived resource. The [repository](https://github.com/raspberrypilearning/uploading-weather-data-to-weather-underground) will remain available but the resource will no longer be maintained or updated. Some or all parts of the resource may no longer work. To see our latest resources, please visit [projects.raspberrypi.org](https://projects.raspberrypi.org).
+
 ## Introduction
 
 There are lots of ways to collect weather data with a Raspberry Pi. For example, you could:
